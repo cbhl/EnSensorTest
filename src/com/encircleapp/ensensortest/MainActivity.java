@@ -1,14 +1,15 @@
 package com.encircleapp.ensensortest;
 
 import java.util.List;
+import java.util.Locale;
 
+import android.app.Activity;
+import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.app.Activity;
-import android.content.Context;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ public class MainActivity extends Activity {
             if (mTextView != null && mImageView != null) {
                 // do stuff
                 final String val = String.format(
+                        Locale.US,
                         "%s %s %d %f %f %f",
                         event.sensor.getName(),
                         event.sensor.getVendor(),
